@@ -1,16 +1,32 @@
 #include<stdio.h>
 
 void main() {
-    int a, b;
+    int a=2, b=3;
 
     printf("\nEnter a and b: ");
     scanf("%d %d", &a, &b);
 
-    printf("\n%d + %d = %d", a, b, a+b);
-    printf("\n%d - %d = %d", a, b, a-b);
-    printf("\n%d * %d = %d", a, b, a*b);
-    printf("\n%d / %d = %d", a, b, a/b);    //quotient
-    printf("\n%d (mod) %d = %d", a, b, a%b);    //remainder
+    // printf("\n\nArithmetic Operators: ");
+    // printf("\n%d + %d = %d", a, b, a+b);
+    // printf("\n%d - %d = %d", a, b, a-b);
+    // printf("\n%d * %d = %d", a, b, a*b);
+    // printf("\n%d / %d = %d", a, b, a/b);    //quotient
+    // printf("\n%d (mod) %d = %d", a, b, a%b);    //remainder
+
+    // printf("\n\nAssignment Operators: ");   //a += b; <---> a = a+b
+    // printf("\n%d + %d = %d", a, b, a += b);
+    // printf("\n%d - %d = %d", a, b, a -= b);
+    // printf("\n%d * %d = %d", a, b, a *= b);
+    // printf("\n%d / %d = %d", a, b, a /= b);    //quotient
+    // printf("\n%d (mod) %d = %d", a, b, a %= b);    //remainder
+
+    printf("\n\nRelational/Comparision Operators: ");   //return boolean values (true-1 -- false-0)
+    printf("\n%d < %d = %d", a, b, a < b);
+    printf("\n%d > %d = %d", a, b, a > b);
+    printf("\n%d <= %d = %d", a, b, a <= b);
+    printf("\n%d >= %d = %d", a, b, a >= b);
+    printf("\n%d == %d = %d", a, b, a == b);
+    printf("\n%d != %d = %d", a, b, a != b);
 
 }
 
