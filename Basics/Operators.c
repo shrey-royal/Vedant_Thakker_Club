@@ -54,13 +54,23 @@ void main() {
     // printf("\na-- = %d\tb-- = %d", a--, b--);
     // printf("\na = %d\t\tb = %d", a, b);
 
-    int a = 37, b = 26, d = 0;
-    printf("\na = %d\t\tb = %d", a, b);
+    // int a = 37, b = 26, d = 0;
+    // printf("\na = %d\t\tb = %d", a, b);
     
-    d = (++a + --b + --a - ++b - --a + b-- + a-- + --a - --b - a-- + b-- + --a + --b + --a + --b + ++a - ++b - b-- + a-- + --a + --b + a-- - b--);
-    printf("d = %d", d);
+    // d = (++a + --b + --a - ++b - --a + b-- + a-- + --a - --b - a-- + b-- + --a + --b + --a + --b + ++a - ++b - b-- + a-- + --a + --b + a-- - b--);
+    // printf("d = %d", d);
 
-    printf("\na = %d\t\tb = %d", a, b);
+    // printf("\na = %d\t\tb = %d", a, b);
+
+
+    //Bitwise Operator -> 25 12
+    printf("\n%d & %d = %d", 25, 12, 25&12);
+    printf("\n%d | %d = %d", 25, 12, 25|12);
+    printf("\n%d ^ %d = %d", 25, 12, 25^12);
+    printf("\n%d << %d = %d", 25, 2, 25<<2);
+    printf("\n%d >> %d = %d", 25, 2, 25>>2);
+
+
 }
 
 /*
