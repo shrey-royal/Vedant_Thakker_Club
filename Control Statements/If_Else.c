@@ -1,13 +1,34 @@
 #include<stdio.h>
 
 void main() {
-    int i = 0;
+    int marks;
 
-    if(i == 1) {
-        printf("You can Apply!!!");
+    // if(i == 1) {
+    //     printf("You can Apply!!!");
+    // } else {
+    //     printf("You can Apply!!! (with phd pedegree)");
+    // }
+
+    printf("\nEnter your marks: ");
+    scanf("%d", &marks);
+
+    if(marks >= 0 && marks <= 100) {
+        if(marks > 80 && marks <= 100) {
+            printf("\nGrade A");
+        } else if(marks > 60 && marks <= 80) {
+            printf("\nGrade B");
+        } else if(marks > 40 && marks <= 60) {
+            printf("\nGrade C");
+        } else if(marks > 33 && marks <= 40) {
+            printf("\nGrade D");
+        } else if(marks >= 0 && marks <= 33) {
+            printf("\nGrade F");
+        }
     } else {
-        printf("You can Apply!!! (with phd pedegree)");
+        printf("\nInvalid Input");
     }
+
+
 }
 
 /*
