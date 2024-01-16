@@ -2,12 +2,13 @@
 #include <stdlib.h>
 
 int main() {
-    int choice, total=0;
+    int choice, total=0, qty=1;
 
     while (choice != 7) {
         printf("\n");
-        system("pause");
-        system("cls");
+        system("pause");    //wait until some key is pressed (Press any Key to continue...)
+        mainMenu:   //label
+        system("cls");      //clears the screen
         printf("\nStarbucks Menu:\n");
         printf("1. Coffee\n");
         printf("2. Tea\n");
@@ -28,33 +29,41 @@ int main() {
                 printf("3. Espresso - 40\n");
                 printf("4. Americano - 50\n");
                 printf("5. Mocha - 60\n");
+                printf("6. Goto Main Menu");
                 printf("\nEnter your choice: ");
                 scanf("%d", &choice);
+                
+                printf("\nEnter the quantity: ");
+                scanf("%d", &qty);
+                
                 switch(choice) {
-                    case 1: 
+                    case 1:
                         printf("Cappuccino Added!");
-                        total += 20;
+                        total += (qty*20);
                         break;
 
                     case 2:
                         printf("Latte Added!");
-                        total += 30;
+                        total += (qty*30);
                         break;
 
                     case 3:
                         printf("Espresso Added!");
-                        total += 40;
+                        total += (qty*40);
                         break;
 
                     case 4:
                         printf("Americano Added!");
-                        total += 50;
+                        total += (qty*50);
                         break;
 
                     case 5:
                         printf("Mocha Added!");
-                        total += 60;
+                        total += (qty*60);
                         break;
+
+                    case 6:
+                        goto mainMenu;  //goto label
 
                     default:
                         printf("Default Coffee");
@@ -107,7 +116,6 @@ int main() {
                 break;
 
             case 7:
-                printf("\nExiting the program. Goodbye!\n");
                 break;
 
             default:
