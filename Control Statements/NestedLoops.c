@@ -1,13 +1,13 @@
 #include<stdio.h>
 
 void main() {
-    int i, j, k;
+    int i, j, k, r, noOfSpaces=1;
 
-    for(i=0; i<5; i++) {    //responsible for rows
-        for(j=0; j<5; j++)    //responsible for cols
-            printf("(%d, %d)\t", i, j);
-        printf("\n");
-    }
+    // for(i=0; i<5; i++) {    //responsible for rows
+    //     for(j=0; j<5; j++)    //responsible for cols
+    //         printf("(%d, %d)\t", i, j);
+    //     printf("\n");
+    // }
 
     // printf("\n\n");
     // for(i=0; i<5; i++) {
@@ -64,17 +64,31 @@ void main() {
     // }
 
     //Triangle
-    for(i=0; i<=5; i++) {
-        for(k=5; k>i; k--) {
+    // for(i=0; i<=5; i++) {
+    //     for(k=5; k>i; k--) {
+    //         printf("  ");
+    //     }
+    //     for(j=0; j<(2*i-1); j++) {
+    //         printf("* ");
+    //     }
+    //     printf("\n");        
+    // }
+
+    //Reverse Triangle
+
+    printf("\nEnter rows: ");
+    scanf("%d", &r);
+
+    for(i=r; i>=1; i--) {
+        for(j=1; j<noOfSpaces; j++) {
             printf("  ");
         }
-        for(j=0; j<(2*i-1); j++) {
+        for(k=1; k<=(2*i-1); k++) {
             printf("* ");
         }
-        printf("\n");        
+        noOfSpaces++;   //after every row the noOfSpaces will increase
+        printf("\n");
     }
-
-    //half triangle print
 }
 
 /*
