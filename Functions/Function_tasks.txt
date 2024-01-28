@@ -1,0 +1,37 @@
+0.Function to sum two numbers (w/o return type w/o arg. )
+1.Function to find Factorial (w/o return type w/o arg. )
+3.Function to find Power (w/o return type w/o arg. )
+4.Function to find sum (w/o return type – w argument)
+5.Function to find power by passing values in function. (example of (w/o return type – w argument))
+6.Function to find sum (w return type – w argument)
+7.Function to find avg (w return type – w argument)
+8.Function to find Simple Interest (w/o return type w arg)
+9.Function to reverse the given numbers. (w/o return w. arg.)
+10. Function to sum all digit in the given number.(w/o return w. arg.)
+12. WAP to evaluate p = x / (y – z) by checking whether value of denominator two variables are same or not. (w. return and w. arg. )
+13.Function to find maximum from the array elements (passing array as argument )
+14.Function to find Factorial (w return type w arg – recursion)
+15.Function to find Maximum and Minimum Number (passing array)
+16. Function to count Total Upper Letters , Lower OR any special letter.
+
+Extreme level:
+
+> Write a program in C to find the sum of the series 1!/1+2!/2+3!/3+4!/4+5!/5 using the function.
+Expected Output :
+
+The sum of the series is : 34 
+
+> Write a program in C to convert a decimal number to a binary number using the function.
+Test Data :
+Input any decimal number : 65
+Expected Output :
+
+The Binary value is : 1000001 
+
+> Write a program in C to check Armstrong and Perfect numbers using the function.
+Test Data :
+Input any number: 371
+Expected Output :
+
+The 371 is an Armstrong number.                                                 
+The 371 is not a Perfect number.
