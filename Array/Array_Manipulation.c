@@ -49,6 +49,21 @@ int findMax(int arr[], int size) {
     return max;
 }
 
+//Bubble Sort Algorithm
+void sortArray(int arr[], int size) {
+    int i, temp=0;
+    for (i = 0; i < size-1; i++) {        
+        for (int j = i+1; j < size; j++) {
+            if(arr[i] > arr[j]) {
+                //swapping
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+}
+
 void printArray(int arr[], int size) {
     printf("\narr[%d] = { ", size);
     for (int i = 0; i < size; i++) {
@@ -73,7 +88,9 @@ int main() {
 
     printArray(arr, size);
 
-    printf("findMax(): %d", findMax(arr, size));
+    // printf("findMax(): %d", findMax(arr, size));
+
+    sortArray(arr, size);
 
     printArray(arr, size);
     
