@@ -64,11 +64,13 @@ void main() {
 
 
     //Bitwise Operator -> 25 12
-    printf("\n%d & %d = %d", 25, 12, 25&12);
-    printf("\n%d | %d = %d", 25, 12, 25|12);
-    printf("\n%d ^ %d = %d", 25, 12, 25^12);
-    printf("\n%d << %d = %d", 25, 2, 25<<2);
-    printf("\n%d >> %d = %d", 25, 2, 25>>2);
+    // printf("\n%d & %d = %d", 25, 12, 25&12);
+    // printf("\n%d | %d = %d", 25, 12, 25|12);
+    // printf("\n%d ^ %d = %d", 25, 12, 25^12);
+    // printf("\n%d << %d = %d", 25, 2, 25<<2);
+    // printf("\n%d >> %d = %d", 25, 2, 25>>2);
+
+    printf("\n25 ^ 12 = %d", 25^12);    //21
 
 
 }

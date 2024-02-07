@@ -1,5 +1,5 @@
 /*
-Programs:
+Programs: (HOMEWORK)
 
 1. Write a C program to find the sum of all elements in an integer array.
 2. Implement a C function to reverse the elements of an integer array in place.
