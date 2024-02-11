@@ -14,6 +14,7 @@ Programs: (HOMEWORK)
 */
 
 #include<stdio.h>
+#include<limits.h>
 
 int sumOfArray(int arr[], int size) {
     int sum=0;
@@ -64,6 +65,38 @@ void sortArray(int arr[], int size) {
     }
 }
 
+void isPalindrome(int arr[], int size) {
+    int i, flag = 0;
+    for(i=0; i<size/2; i++) {
+        if(arr[i] != arr[size-i-1]) {
+            flag = 1;
+            break;            
+        }
+    }
+
+    if(flag) {
+        printf("\nArray is not palindrome.");
+    } else {
+        printf("\nArray is palindrome.");
+    }
+}
+
+void secondLargestElement(int arr[], int size) {
+    int i, max = arr[0], smax = arr[0];
+
+    for(i=0; i<size; i++) {
+        printf("%d\t%d\n", smax, max);
+        if(max < arr[i]) {
+            smax = max;
+            max = arr[i];
+        } else if(smax < arr[i] && smax != max) {
+            smax = arr[i];
+        }
+    }
+
+    printf("\nSecond largest element is %d", smax);
+}
+
 void printArray(int arr[], int size) {
     printf("\narr[%d] = { ", size);
     for (int i = 0; i < size; i++) {
@@ -74,6 +107,7 @@ void printArray(int arr[], int size) {
 
 int main() {
     int arr[] = { 48, 10, 16, 97, 92, 91, 90, 2, 33, 52 };
+    // int arr[] = {1, 2, 1};
     int size = sizeof(arr)/sizeof(arr[0]);
     
     // printf("sum is %d", sumOfArray(arr));
@@ -90,9 +124,11 @@ int main() {
 
     // printf("findMax(): %d", findMax(arr, size));
 
-    sortArray(arr, size);
+    // sortArray(arr, size);
 
     printArray(arr, size);
+    // isPalindrome(arr, size);
+    secondLargestElement(arr, size);
     
     return 0;
 }
