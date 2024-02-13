@@ -16,6 +16,8 @@ Programs: (HOMEWORK)
 #include<stdio.h>
 #include<limits.h>
 
+void printArray(int arr[], int size);
+
 int sumOfArray(int arr[], int size) {
     int sum=0;
 
@@ -53,16 +55,29 @@ int findMax(int arr[], int size) {
 //Bubble Sort Algorithm
 void sortArray(int arr[], int size) {
     int i, temp=0;
+    // for (i = 0; i < size-1; i++) {        
+    //     for (int j = i+1; j < size; j++) {
+    //         if(arr[i] > arr[j]) {
+    //             //swapping
+    //             temp = arr[i];
+    //             arr[i] = arr[j];
+    //             arr[j] = temp;
+    //         }
+    //     }
+    //     printArray(arr, size);
+    // }
+
     for (i = 0; i < size-1; i++) {        
-        for (int j = i+1; j < size; j++) {
-            if(arr[i] > arr[j]) {
-                //swapping
-                temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
+        for (int j = 0; j < size-i-1; j++) {
+            if(arr[j] > arr[j+1]) {
+                temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
             }
         }
+        printArray(arr, size);
     }
+    
 }
 
 void isPalindrome(int arr[], int size) {
@@ -97,6 +112,56 @@ void secondLargestElement(int arr[], int size) {
     printf("\nSecond largest element is %d", smax);
 }
 
+int removeDuplicates(int arr[], int size, int res[]) {
+    int i, j, k=0;
+
+    for (i = 0; i < size; i++) {
+        int isDuplicate = 0;
+        for (j = 0; j < i; j++) {
+            if (arr[i] == arr[j]) {
+                isDuplicate = 1;
+                break;
+            }
+        }
+
+        if(!isDuplicate) {
+            res[k++] = arr[i];
+        }
+    }
+    return k;
+}
+
+void rotateArray(int arr[], int size, int n) {
+    if(size <= 0) return;
+    n %= size;
+
+    //rotate right
+    // for (int i = 0; i < n; i++) {
+    //     int temp = arr[size-1];
+
+    //     for (int j = size-1; j > 0; j--) {
+    //         arr[j] = arr[j-1];
+    //     }
+    //     arr[0] = temp;
+    // }
+
+    //rotate left
+    for (int i = 0; i < n; i++) {
+        int temp = arr[0];
+
+        for (int j = 0; j < size-1; j++) {
+            arr[j] = arr[j+1];
+        }
+        arr[size-1] = temp;
+    }
+}
+
+void mergeArray(int a[], int b[], int size_a, int size_b, int res[], int size) {
+    int i, j;
+    for (i = 0; i < size_a; i++)    res[i] = a[i];
+    for (j = 0; j < size_b; j++)    res[i++] = b[j];
+}
+
 void printArray(int arr[], int size) {
     printf("\narr[%d] = { ", size);
     for (int i = 0; i < size; i++) {
@@ -107,8 +172,14 @@ void printArray(int arr[], int size) {
 
 int main() {
     int arr[] = { 48, 10, 16, 97, 92, 91, 90, 2, 33, 52 };
+    // int arr[] = { 48, 2, 2, 10, 16, 97, 92, 92, 97, 2, 2, 33, 52, 52, 52 };
+    // int arr[] = {1, 2, 2, 3, 4, 4, 5};
     // int arr[] = {1, 2, 1};
     int size = sizeof(arr)/sizeof(arr[0]);
+    int temp[size], tempSize;
+
+    int a[] = {1, 2, 3};
+    int b[] = {4, 5, 6};
     
     // printf("sum is %d", sumOfArray(arr));
 
@@ -120,15 +191,30 @@ int main() {
     // printf("\nReversed Array: \n");
     // printArray(arr, size);
 
-    printArray(arr, size);
+    // printArray(arr, size);
 
     // printf("findMax(): %d", findMax(arr, size));
 
     // sortArray(arr, size);
 
-    printArray(arr, size);
+    // printArray(arr, size);
     // isPalindrome(arr, size);
-    secondLargestElement(arr, size);
+    // secondLargestElement(arr, size);
     
+
+    // printArray(arr, size);
+    // tempSize = removeDuplicates(arr, size, temp);
+    // printArray(temp,tempSize);
+
+    // printArray(arr, size);
+    // rotateArray(arr, size, 2);
+    // sortArray(arr, size);
+    // mergeArray(a, b, 3, 3, temp, 6);
+    // printArray(temp, 6);
+
+    // printArray(arr, size);
+
+    
+
     return 0;
 }
