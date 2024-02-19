@@ -2,7 +2,9 @@
 
 void main() {
     int var = 34;
-    int *ptr = &var;
+    int *ptr;// = &var;
+
+    ptr = &var;
 
     printf("\nValue of var using var: %d", var);
     printf("\nAddress of var using &var: %p", &var);
